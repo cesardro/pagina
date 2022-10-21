@@ -27,7 +27,7 @@ body {
     font-family: var(--fuentePrincipal);
     /*Interlineado*/
     line-height: 1.5;
-    margin: 1%;
+    margin: 2%;
 }
 
 p {font-size: 1.8rem;}
@@ -37,15 +37,12 @@ a {
     color: var(--blanco);
 }
 
-
 .contenedor {
     max-width: 80rem;
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    text-align: center;
-}
+h1, h2, h3 {text-align: center;}
 
 h1 {font-size: 4rem;}
 
@@ -64,7 +61,6 @@ h3 {font-size: 2.4rem;}
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     text-align: center;
     gap: 1rem;
 }
@@ -72,6 +68,7 @@ h3 {font-size: 2.4rem;}
 .headerDiv img {
     max-width: 15rem;
     width: 100%;
+    margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -98,12 +95,10 @@ h3 {font-size: 2.4rem;}
 /* =================== ICONOS =================== */
 
 .iconos {
-    margin: 2rem 0;
     display: flex;
     justify-content: space-evenly;
     max-width: 100%;
     text-align: center;
-    margin-left: 3%;
     background: none;
 }
 
@@ -126,11 +121,18 @@ h3 {font-size: 2.4rem;}
 
 @media (min-width: 768px) {
     .iconos {
-        margin: 2rem 0;
         display: inline;
         max-width: 100%;
         text-align: left;
-        margin-left: 3%;
         background: none;
     }
+}
+
+/* =================== MAIN =================== */
+
+.principal {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10rem;
 }
