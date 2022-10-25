@@ -151,6 +151,7 @@ h3 {font-size: 2.4rem;}
 .aside_izquierda img{
     width: 100%;
     transition: transform .3s;
+    border-radius: 2%;
 }
 
-.aside_izquierda img:hover {transform: scale(1.05);}
+.aside_izquierda img:hover {transform: scale(1.045);}
