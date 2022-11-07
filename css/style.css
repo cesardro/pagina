@@ -1,13 +1,13 @@
 :root {
-    --fondo: #8D706C;
-    --tipografia: #B9B6AD;
-    --iconografia: #544F53;
-    --secundario: #A98472;
-    --iconografiaSecundario: #C49E8B;
-    --contenido: #9E99AD;
+    --fondo: #8d706c;
+    --tipografia: #b9b6ad;
+    --iconografia: #544f53;
+    --secundario: #a98472;
+    --iconografiaSecundario: #c49e8b;
+    --contenido: #9e99ad;
     --blanco: white;
     --negro: rgb(31, 29, 29);
-    --fuentePrincipal: 'Krub', sans-serif; 
+    --fuentePrincipal: "Krub", sans-serif;
 }
 
 /* =================== BOX SIZING =================== */
@@ -17,7 +17,11 @@ html {
     font-size: 62.5%;
 }
 
-*, *:before, *:after {box-sizing: inherit;}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
 /* =================== GLOBALES =================== */
 
@@ -30,7 +34,9 @@ body {
     margin: 2%;
 }
 
-p {font-size: 1.8rem;}
+p {
+    font-size: 1.8rem;
+}
 
 a {
     text-decoration: none;
@@ -42,13 +48,32 @@ a {
     margin: 0 auto;
 }
 
-h1, h2, h3 {text-align: center;}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
 
-h1 {font-size: 4rem;}
+h1 {
+    font-size: 4rem;
+}
 
-h2 {font-size: 3.2rem;}
+h2 {
+    font-size: 3.2rem;
+}
 
-h3 {font-size: 2.4rem;}
+h3 {
+    font-size: 2.4rem;
+}
+
+/* =================== WAVES =================== */
+
+.waves {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
 
 /* =================== HEADER =================== */
 
@@ -88,7 +113,7 @@ h3 {font-size: 2.4rem;}
     }
 }
 
-.navegacion-principal a:hover{
+.navegacion-principal a:hover {
     color: var(--iconografia);
 }
 
@@ -103,7 +128,7 @@ h3 {font-size: 2.4rem;}
 }
 
 .icono img {
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 25%;
 }
 
@@ -111,11 +136,11 @@ h3 {font-size: 2.4rem;}
     background: var(--tipografia);
 }
 
-.seleccionado img{
+.seleccionado img {
     background-color: var(--iconografiaSecundario);
 }
 
-.seleccionado img:hover{
+.seleccionado img:hover {
     background: var(--iconografiaSecundario);
 }
 
@@ -148,10 +173,40 @@ h3 {font-size: 2.4rem;}
     text-align: justify;
 }
 
-.aside_izquierda img{
-    width: 100%;
-    transition: transform .3s;
-    border-radius: 2%;
+.noticia {
+    outline: 1px solid var(--iconografia);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
-.aside_izquierda img:hover {transform: scale(1.045);}
+.noticia:last-of-type {
+    margin-bottom: unset;
+}
+
+.tarjeta {
+    width: 95%;
+    height: 200px;
+    background-color: #333;
+    border-radius: 10px;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    outline-offset: -8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.tarjeta-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: transform 0.75s;
+}
+
+.noticia:hover .tarjeta-img {
+    transform: scale(1.2);
+}
