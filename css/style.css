@@ -122,9 +122,7 @@ h3 {
 .iconos {
     display: flex;
     justify-content: space-evenly;
-    max-width: 100%;
     text-align: center;
-    background: none;
 }
 
 .icono img {
@@ -146,10 +144,8 @@ h3 {
 
 @media (min-width: 768px) {
     .iconos {
-        display: inline;
-        max-width: 100%;
-        text-align: left;
-        background: none;
+        display: flex;
+        max-width: 25%;
     }
 }
 
@@ -158,13 +154,31 @@ h3 {
 .principal {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 5rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
 }
 
 .aside_izquierda {
+    grid-row: 2 / 3;
+}
+
+@media (min-width: 768px) {
+    .principal {
+        margin-top: 3rem;
+        display: grid;
+        gap: unset;
+        grid-template-columns: 1fr 3fr;
+    }
+    .aside_izquierda {
+        grid-row: unset;
+    }
+}
+
+/* =================== NOTICIAS =================== */
+
+.aside_izquierda {
     background-color: var(--secundario);
-    border-radius: 2%;
+    border-radius: 2.5rem;
     padding: 1rem;
 }
 
@@ -174,10 +188,10 @@ h3 {
 }
 
 .noticia {
-    outline: 1px solid var(--iconografia);
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 5px;
+    outline: 0.1rem solid var(--iconografia);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .noticia:last-of-type {
@@ -186,15 +200,16 @@ h3 {
 
 .tarjeta {
     width: 95%;
-    height: 200px;
+    height: 20rem;
     background-color: #333;
-    border-radius: 10px;
-    outline: 1px solid rgba(255, 255, 255, 0.5);
-    outline-offset: -8px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    outline: 0.1 solid rgba(255, 255, 255, 0.5);
+    outline-offset: -0.8rem;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.1);
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .tarjeta-img {
@@ -203,10 +218,34 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
     transition: transform 0.75s;
 }
 
 .noticia:hover .tarjeta-img {
     transform: scale(1.2);
+}
+
+/* =================== UPCOMING =================== */
+
+.tabla {
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 2rem;
+}
+
+th {
+    padding: 2rem;
+}
+
+tr {
+    background-color: var(--secundario);
+    padding: 1rem;
+}
+
+td,
+th {
+    border-radius: 1rem;
+    text-align: center;
+    padding: 3rem;
 }
