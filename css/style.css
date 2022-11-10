@@ -249,3 +249,51 @@ th {
     text-align: center;
     padding: 3rem;
 }
+
+/* =================== TARJETAS =================== */
+
+.card {
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60% + 35px);
+    background-color: var(--fondo);
+    transition: transform 0.5s 0.12s ease-in;
+    z-index: -1;
+}
+
+.card::before {
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+    transform: translateY(-100%);
+}
+
+.card::after {
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.card__content {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.card:hover::before,
+.card:hover::after {
+    transform: translateY(0);
+}
+
+.card:hover .card__content {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
