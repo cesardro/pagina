@@ -1,0 +1,40 @@
+label,
+input,
+select,
+textarea,
+button {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+.input__config {
+    background: #ecf0f3;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button {
+    width: 20%;
+    color: white;
+    margin-top: 20px;
+    background: #544f53;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+button:hover {
+    background-color: white;
+    color: #544f53;
+}

@@ -102,11 +102,11 @@ h3 {
         grid-template-columns: 1fr 5fr;
     }
     .navegacion-principal {
-        margin-top: 4rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         font-size: 3rem;
+        align-items: center;
     }
     .headerDiv img {
         max-width: 20rem;
@@ -115,6 +115,13 @@ h3 {
 
 .navegacion-principal a:hover {
     color: var(--iconografia);
+}
+
+.titulo-seleccionado {
+    color: var(--blanco);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    background: var(--iconografia);
 }
 
 /* =================== ICONOS =================== */
@@ -267,7 +274,7 @@ th {
     width: 100%;
     height: calc(60% + 35px);
     background-color: var(--fondo);
-    transition: transform 0.5s 0.12s ease-in;
+    transition: transform 0.2s 0.12s ease-in;
     z-index: -1;
 }
 
@@ -295,5 +302,5 @@ th {
 
 .card:hover .card__content {
     opacity: 1;
-    transition-delay: 0.5s;
+    transition-delay: 0.1s;
 }
