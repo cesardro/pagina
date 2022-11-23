@@ -304,3 +304,11 @@ th {
     opacity: 1;
     transition-delay: 0.1s;
 }
+
+/* =================== FOOTER =================== */
+
+.waves__footer {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
