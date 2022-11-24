@@ -307,8 +307,24 @@ th {
 
 /* =================== FOOTER =================== */
 
-.waves__footer {
+ul {
+    list-style: none;
+}
+
+ul a {
+    color: black;
+}
+
+footer {
     position: absolute;
-    z-index: -1;
     left: 0;
+    right: 0;
+}
+
+.contenedor_footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+    background-color: var(--secundario);
+    padding: 5rem;
 }
