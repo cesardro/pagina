@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet" />
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="../css/normalize.css" />
         <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="../css/form.css" />
@@ -33,69 +38,92 @@
                 </div>
             </div>
         </header>
-        <div class="iconos">
-            <a href="juegos/LeagueOfLegens.html" alt="LoL" class="icono">
-                <img src="../imagenes/LoL.png" alt="League Of Legends" />
-            </a>
-            <a href="juegos/Rainbow6.html" alt="RainbowSix" class="icono">
-                <img src="../imagenes/R6.png" alt="RainbowSix" />
-            </a>
-            <a href="juegos/Overwatch2.html" alt="Overwatch2" class="icono">
-                <img src="../imagenes/Overwatch.png" alt="Overwatch2" />
-            </a>
-            <a href="juegos/Valorant.html" alt="Valorant" class="icono">
-                <img src="../imagenes/Valorant.png" alt="Valorant" />
-            </a>
-            <a href="juegos/CSGO.html" alt="CSGO" class="icono">
-                <img src="../imagenes/CSGO.png" alt="CounterStrike" />
-            </a>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-2 mb-3">
+                    <a href="juegos/LeagueOfLegens.html" class="d-block icono">
+                        <img src="../imagenes/LoL.png" alt="League Of Legends" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <a href="juegos/Rainbow6.html" class="d-block icono">
+                        <img src="../imagenes/R6.png" alt="RainbowSix" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <a href="juegos/Overwatch2.html" class="d-block icono">
+                        <img src="../imagenes/Overwatch.png" alt="Overwatch2" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <a href="juegos/Valorant.html" class="d-block icono">
+                        <img src="../imagenes/Valorant.png" alt="Valorant" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <a href="juegos/CSGO.html" class="d-block icono">
+                        <img src="../imagenes/CSGO.png" alt="CounterStrike" class="img-fluid" />
+                    </a>
+                </div>
+            </div>
         </div>
         <main>
             <div class="contenedor">
                 <form action="formulario.py">
-                    <h1>¡Ayudanos a mejorar!</h1>
-                    <label for="nombre"><p>Nombre:</p></label>
-                    <input class="input__config" type="text" placeholder="Escribe tu nombre" />
-                    <label for="correo"><p>Correo:</p></label>
-                    <input class="input__config" type="text" placeholder="ejemplo@test.com" />
-                    <label for="juego"><p>Juego favorito:</p></label>
-                    <select class="">
-                        <option value="" disale selected hidden>Selecciona...</option>
-                        <option value="">CSGO</option>
-                        <option value="">Legue Of Legends</option>
-                        <option value="">Overwatch2</option>
-                        <option value="">RainbowSix</option>
-                        <option value="">Valorant</option>
-                    </select>
-                    <label for="comentario"><p>Comentario:</p></label>
-                    <textarea class="input__config" cols="40" placeholder="Dejanos saber."></textarea>
-                    <button type="submit">ENVIAR</button>
+                    <h1 class="text-center">¡Ayudanos a mejorar!</h1>
+                    <div class="form-group">
+                        <label for="nombre"><p>Nombre:</p></label>
+                        <input class="form-control input__config" type="text" placeholder="Escribe tu nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="correo"><p>Correo:</p></label>
+                        <input class="form-control input__config" type="email" placeholder="ejemplo@test.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="juego"><p>Juego favorito:</p></label>
+                        <select class="form-control input__config">
+                            <option value="" disabled selected hidden>Selecciona...</option>
+                            <option value="">CSGO</option>
+                            <option value="">Legue Of Legends</option>
+                            <option value="">Overwatch2</option>
+                            <option value="">RainbowSix</option>
+                            <option value="">Valorant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentario"><p>Comentario:</p></label>
+                        <textarea class="form-control input__config" rows="3" placeholder="Dejanos saber."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ENVIAR</button>
                 </form>
             </div>
         </main>
+
         <footer>
             <div class="contenedor_footer">
-                <div class="uno">
-                    <ul>
-                        <li><b>HABLEMOS</b></li>
-                        <li>(+34)611111111</li>
-                        <li>contacto@watchme.com</li>
-                    </ul>
-                </div>
-                <div class="dos">
-                    <ul>
-                        <li><b>DAW WORKING</b></li>
-                        <li>C. Clara Campoamor, 2, 28342</li>
-                        <li>Valdemoro, Madrid</li>
-                    </ul>
-                </div>
-                <div class="tres">
-                    <ul>
-                        <li><b>SÍGUENOS</b></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="">Linkedin</a></li>
-                    </ul>
+                <div class="row">
+                    <div class="col-4 uno">
+                        <ul>
+                            <li><b>HABLEMOS</b></li>
+                            <li>(+34)611111111</li>
+                            <li>contacto@watchme.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 dos">
+                        <ul>
+                            <li><b>DAW WORKING</b></li>
+                            <li>C. Clara Campoamor, 2, 28342</li>
+                            <li>Valdemoro, Madrid</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 tres">
+                        <ul>
+                            <li><b>SÍGUENOS</b></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="">Linkedin</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
